@@ -125,7 +125,6 @@ def init_game():
     g_font = pygame.font.SysFont("fangsong", 24)
     # 初始化随机种子
     random.seed(int(time.time()))
-    # print(pygame.font.get_fonts())
     # 创建角色
     # 随机生成一个名字
     last_name = ['赵', '钱', '孙', '李', '周', '吴', '郑', '王', '冯', '陈', '褚', '卫',
@@ -138,8 +137,8 @@ def init_game():
     print("你的昵称是：", name)
     g_player = Role(randint(100, 500), randint(100, 300), name)
 
-    # TODO:与服务器建立连接
-    g_client.connect(('foxyball.cn', 8712))
+    # 与服务器建立连接
+    g_client.connect(ADDRESS)
     # 开始接受服务端消息
     thead = Thread(target=msg_handler)
     thead.setDaemon(True)
