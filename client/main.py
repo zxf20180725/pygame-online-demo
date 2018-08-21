@@ -9,6 +9,8 @@ import socket  # 导入 socket 模块
 
 from base import Protocol
 
+ADDRESS = ('127.0.0.1', 8712)  # ('foxyball.cn', 8712)  # 如果服务端在本机，请使用('127.0.0.1', 8712)
+
 WIDTH, HEIGHT = 640, 480  # 窗口大小
 
 g_font = None
